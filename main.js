@@ -16,14 +16,16 @@ function download(filename, text) {
     document.body.removeChild(element);
 }
 
-const textarea = document.getElementById('inp-txtarea')
-
-document.querySelectorAll('button').forEach(node => node.addEventListener("click", (e) => {
-    switch (e.path[0].id) {
+function buttonEventHandler(event) {
+    switch (event.path[0].id) {
         case ('upper-case'): textarea.value = textarea.value.toUpperCase(); break;
         case ('lower-case'): textarea.value = textarea.value.toLowerCase(); break;
         case ('proper-case'): textarea.value = textarea.value.toProperCase(); break;
         case ('sentence-case'): textarea.value = textarea.value.toSentenceCase(); break;
         case ('save-text-file'): download("text.txt", textarea.value); break;
     }
-}))
+}
+
+const textarea = document.getElementById('inp-txtarea')
+
+document.querySelectorAll('button').forEach(node => node.addEventListener("click", (e) => buttonEventHandler(e)))
