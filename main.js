@@ -23,6 +23,7 @@ function buttonEventHandler(event) {
         case ('proper-case'): textarea.value = textarea.value.toProperCase(); break;
         case ('sentence-case'): textarea.value = textarea.value.toSentenceCase(); break;
         case ('save-text-file'): download("text.txt", textarea.value); break;
+        default: alert('An error has occurred');
     }
 }
 
