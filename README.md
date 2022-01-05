@@ -1,4 +1,4 @@
- Case Converter
+### Case Converter
 ![Screenshot](https://github.com/paulhorstmann/Case-Converter/raw/master/screenshot.png)
 ### Demo
 [https://paulhorstmann.github.io/Case-Converter/](https://paulhorstmann.github.io/Case-Converter/)
